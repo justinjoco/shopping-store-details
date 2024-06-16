@@ -5,7 +5,7 @@ This page documents my retrospective of my Shopping Store full stack project. I 
 [Draw.io](https://drive.google.com/file/d/1inmYJVW4eI7bh-OSSD19OOobevA2uMLM/view?usp=drive_link)
 
 # Video Demo
-<iframe src="https://drive.google.com/file/d/1FhlwfybegzviEDT2KA5yS1lVR6M5gCAu/preview" width="640" height="480" allow="autoplay"></iframe>
+<iframe src="https://drive.google.com/file/d/1FhlwfybegzviEDT2KA5yS1lVR6M5gCAu/preview" width="640" height="480" allow="fullscreen"></iframe>
 
 # Discussion
 I wanted to create a non-trivial full stack project that incorporated real-time CRUD updates to a relational database, and a React frontend with somewhat complex component state managment (not so complex to require something like Redux). Although creating the database models and backend was relatively straightforward, the frontend was easily the most complex part of this project.
