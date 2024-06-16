@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        <meta name="author" content="Justin-Anthony Joco">
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Shopping Store - Retrospective</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Shopping Store - Retrospective</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="true">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#overview" class="nav-link">Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#system-design" class="nav-link">System Design</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#video-demo" class="nav-link">Video Demo</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#demo-explanation" class="nav-link">Demo Explanation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#project-discussion" class="nav-link">Project Discussion</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#database" class="nav-link">Database</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#backend" class="nav-link">Backend</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#frontend" class="nav-link">Frontend</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#future-workconclusions" class="nav-link">Future Work/Conclusions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="overview">Overview</h1>
+<p>This page documents my retrospective of my Shopping Store full stack project. I embed a video demo that shows the frontend at work, and the statuses of the database after different CRUD updates. <a href="https://github.com/justinjoco/shopping-store">Project link</a></p>
+<h1 id="system-design">System Design</h1>
+<p>The following Draw.io link shows my requirements for this project, the data models, and the REST APIs exposed by the backend.
+<a href="https://drive.google.com/file/d/1inmYJVW4eI7bh-OSSD19OOobevA2uMLM/view?usp=drive_link">Draw.io</a></p>
+<h1 id="video-demo">Video Demo</h1>
+<iframe src="https://drive.google.com/file/d/1FhlwfybegzviEDT2KA5yS1lVR6M5gCAu/preview" width="900" height="480" allow="fullscreen"></iframe>
+
+<h2 id="demo-explanation">Demo Explanation</h2>
+<p>Note: after each write, I show the updated DB state of the "item", "order", and "item_order" tables.</p>
+<h3 id="customer">Customer</h3>
+<p>In this demo, I add several of the initial items in the Items store into a shopping cart. The dropdown of each item has a max of 5 items to buy at one time.</p>
+<p>Each item is added to the shopping cart, and I click "submit" to purchase the items. Once "submit" has been pressed, the shopping cart is cleared.</p>
+<p>The userId used when purchasing a set of items is set by the user in the text area at the top of the Customer page.</p>
+<p>Once the shopping cart has been submitted, a list of orders for the given userId is updated and displayed on the Customer page.</p>
+<h3 id="admin">Admin</h3>
+<p>In this part of the demo, I can show that the admin can see all orders for all users.</p>
+<p>By clicking an "update" button for a given item, I can update the populated field of the given item. For example, when I want to update "Brooms", I only need to fill out the "Count" field, and the DB will be updated accordingly.</p>
+<p>I can also "Delete" an item from the store. However, to preserve DB consistency, including the consistency of the Order and ItemOrder table, an item delete is a soft-delete, in which I set the "is_available" field for an item to <code>False</code>.</p>
+<p>Lastly, I can add an item to the store using the "Add Item" form, in which a new item is inserted in the DB on a submit.</p>
+<p>The item table is updated accordingly right after a DB update.</p>
+<h1 id="project-discussion">Project Discussion</h1>
+<p>I wanted to create a non-trivial full stack project that incorporated real-time CRUD updates to a relational database, and a React frontend with somewhat complex component state managment (but, not so complex to require something like Redux). Although creating the database models and backend was relatively straightforward, the frontend was easily the most complex part of this project.</p>
+<p>The point of this project was for me to learn Flask and integrating this server with a React frontend and a SQL backend. Any other advanced topics like auth is out of the scope of this project.</p>
+<p>In terms of implementing this project, I started with setting up the database models, then store backend, then finally the frontend. </p>
+<h2 id="database">Database</h2>
+<p>For this shopping store, I decided to keep things simple by having Item and Order data models, and an associative table ItemOrder that records the amount purchased of each individual item. I used a Postgres database because of the relations between the different data models, and since there is a lot of community support and documentation on Postgres.</p>
+<h2 id="backend">Backend</h2>
+<p>I used the Flask framework for Python because it's one of the most popular web frameworks, and it has loads of community support. I used SQLAlchemy, so that I don't need to write pure SQL statements, and so that I learn how to use Object Relational Mapping.</p>
+<p>I enjoyed using SQLAlchemy because it automatically joined the data models together based on their relationships with each other. </p>
+<p>I liked Flask because it makes writing REST APIs easy to do, as well as parsing the request headers and bodies. I also didn't know Flask since my professional experience with microservice development was with Spring Boot, Golang, and Node. In addition, it's used a lot in various parts of the tech industry.</p>
+<p>I also used Flask-SQLAlchemy since writing code easier.</p>
+<p>I chose Python because I mainly cared about writing business logic, and since I didn't feel like fighting with the compiler.</p>
+<p>I created separate APIs for customer and admin since I wanted to have the customer be able to make purchases in the current items, and the admins to update, delete, and add new items to the store. The admins can also see the orders for all different users.</p>
+<p>Note that there was no true auth in this project, as the API endpoints parse through the request headers for <code>role</code> and <code>userId</code> to determine permissions. I intend to implement auth in a separate project.</p>
+<h2 id="frontend">Frontend</h2>
+<p>I chose React as the frontend library/framework because it's a popular library in industry, I've had experience with it, and it has a lot of additional libraries to make the UI look pretty.</p>
+<p>There was plenty of state management to deal with in the frontend since I had to record the the request bodies to be used in the REST API write calls.</p>
+<h1 id="future-workconclusions">Future Work/Conclusions</h1>
+<p>Overall, I thought this was a fun project, where I learn how to use Flask and SQLAlchemy. I also made practical data models with relations between each model. I also learned how to implement a more complex React frontend in order to submit REST API requests to the Python backend.</p>
+<p>I thought about putting in Auth into this project, but considering that my next project is scoped for Auth, it wasn't necessary for this project. I'll use some of the knowledge learned here to help my IAM project, including the use of React Router for the OAuth 2.0 callbacks. </p>
+<p>This project took me about two weeks to complete in my remaining weeks at ObvioHealth, and I expect the IAM project to be at least 4 weeks considering that I'll be working at Disney by then.</p>
+<p>Perhaps once I finish the Auth project, I'll retroactively put in auth here, but I may not.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2024 Justin-Anthony Joco</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.6.0
+Build Date UTC : 2024-06-16 19:25:31.247989+00:00
+-->
