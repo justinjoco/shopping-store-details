@@ -1,5 +1,5 @@
 # Overview
-This page documents my retrospective of my Shopping Store full stack project. I embed a video demo that shows the frontend at work, and the statuses of the database in after different CRUD updates. [Project link](https://github.com/justinjoco/shopping-store)
+This page documents my retrospective of my Shopping Store full stack project. I embed a video demo that shows the frontend at work, and the statuses of the database after different CRUD updates. [Project link](https://github.com/justinjoco/shopping-store)
 
 # System Design
 The following Draw.io link shows my requirements for this project, the data models, and the REST APIs exposed by the backend.
